@@ -13,17 +13,17 @@ App.service('FeedService',['$http',function($http){
 			rssUrl: 'http://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml'
 		},
 		{
-			name:'DailyMail.UK'
+			name:'DailyMail.UK',
 			rssUrl:'http://www.dailymail.co.uk/tvshowbiz/index.rss',
 			hemisphere: 'western'
 		},
 		{
-			name:'Philippine Entertainment Portal'
+			name:'Philippine Entertainment Portal',
 			rssUrl:'http://www.pep.ph/rss/pep_newsfeed.php',
 			hemisphere: 'eastern'
 		},
 		{
-			name:'Pinoy Gossip Boy'
+			name:'Pinoy Gossip Boy',
 			rssUrl:'http://pinoygossipboy.net/feed/',
 			hemisphere: 'eastern'
 		}
