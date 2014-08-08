@@ -4,7 +4,7 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>AngularJS Feed Reader - jsFiddle demo</title>
   <script type='text/javascript' src="//code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.1/angular.min.js'></script>
+  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script>
   <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css">  
   <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-responsive.min.css">    
@@ -48,10 +48,20 @@
             <ul class="unstyled">
                 <span class="badge badge-warning" ng-show="feeds.length > 0">{{(feeds | filter:filterText).length}} Items</span>
                 <li ng-repeat="feed in feeds | filter:filterText">                    
-                    <h5><a target="_blank" href="{{feed.link}}">{{feed.title}}</a></h5>
-                    <img src="{{feed.image}}">
-                    <p class="text-left">{{feed.contentSnippet}}</p>                    
-                    <span class="small">{{feed.publishedDate}}</span>
+                    <div class="media">
+                        <div class="col-xs-2">
+                        <a class="pull-left" href="#">
+                            <img src="{{feed.image}}" class="media-object img-responsive">
+                        </a>
+                        </div>
+                        <div class="media-body col-xs-10">
+                            <h4 class="media-heading"><a target="_blank" href="{{feed.link}}">{{feed.title}}</a></h4>
+                            <p class="text-left">{{feed.contentSnippet}}</p>
+                            <span class="small">{{feed.publishedDate}}</span>
+                        </div>
+                    </div>
+
+
                 </li>                
             </ul>            
         </div>
