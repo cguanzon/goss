@@ -19,15 +19,19 @@
     <div class="navmenu navmenu-default navmenu-fixed-left">
         <a class="navmenu-brand" href="#">Walang Hiya Kang Chismoso Ka!</a>
         <ul class="nav navmenu-nav">
-            <li><a href="#" ng-click="feedSrc='http://www.tmz.com/rss.xml';loadFeed($event);">TMZ</a></li>
-            <li><a href="#" ng-click="feedSrc='http://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml';loadFeed($event)">E! News</a></li>
-            <li><a href="#" ng-click="feedSrc='http://www.dailymail.co.uk/tvshowbiz/index.rss';loadFeed($event)">DailyMail.UK</a></li>
-            <li><a href="#" ng-click="feedSrc='http://feeds.huffingtonpost.com/huffingtonpost/raw_feed';loadFeed($event)">Huffington Post</a></li>
-            <li><a href="#" ng-click="feedSrc='http://feeds.feedburner.com/TechCrunch';loadFeed($event)">TechCrunch</a></li>
-            <li><a href="#" ng-click="feedSrc='http://www.pep.ph/rss/pep_celebfeed.php';loadFeed($event)">Philippine Entertainment Portal</a></li>
+            <li><a href="#" ng-click="feedSrc='http://pinoyshowbizdaily.blogspot.com/feeds/posts/default';loadFeed($event)">Pinoy Showbiz Daily</a></li>
+            <!--<li><a href="#" ng-click="feedSrc='http://www.tmz.com/rss.xml';loadFeed($event);">TMZ</a></li>-->
+            <!--<li><a href="#" ng-click="feedSrc='http://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml';loadFeed($event)">E! News</a></li>-->
+            <!--<li><a href="#" ng-click="feedSrc='http://www.dailymail.co.uk/tvshowbiz/index.rss';loadFeed($event)">DailyMail.UK</a></li>-->
+            <!--<li><a href="#" ng-click="feedSrc='http://feeds.huffingtonpost.com/huffingtonpost/raw_feed';loadFeed($event)">Huffington Post</a></li>-->
+            <!--<li><a href="#" ng-click="feedSrc='http://feeds.feedburner.com/TechCrunch';loadFeed($event)">TechCrunch</a></li>-->
+            <li><a href="#" ng-click="feedSrc='http://pinoyshowbiz.wordpress.com/feed/';loadFeed($event)">Pinoy Showbiz</a></li>
+            <li><a href="#" ng-click="feedSrc='http://thepulse.ph/feed/';loadFeed($event)">The Pulse</a></li>
+            <!--<li><a href="#" ng-click="feedSrc='http://www.pep.ph/rss/pep_celebfeed.php';loadFeed($event)">Philippine Entertainment Portal</a></li>-->
             <li><a href="#" ng-click="feedSrc='http://pinoygossipboy.net/feed/';loadFeed($event)">Pinoy Gossip Boy</a></li>
-            <li><a href="#" ng-click="feedSrc='http://www.pinoyparazzi.com/feed/';loadFeed($event)">Pinoy Paparazzi</a></li>
-            <li><a href="#" ng-click="feedSrc='http://www.gmanetwork.com/news/rss/videos/show/showbizcentral';loadFeed($event)">GMA Showbiz Central</a></li>
+            <!--<li><a href="#" ng-click="feedSrc='http://www.pinoyparazzi.com/feed/';loadFeed($event)">Pinoy Paparazzi</a></li>-->
+            <!--<li><a href="#" ng-click="feedSrc='http://www.gmanetwork.com/news/rss/videos/show/showbizcentral';loadFeed($event)">GMA Showbiz Central</a></li>-->
+            <li><a href="#" ng-click="feedSrc='http://www.philippineasiannewstoday.com/entertainment/showbiz?format=feed&type=rss';loadFeed($event)">Philippine Asian News Today</a></li>
         </ul>
     </div>
 
@@ -39,22 +43,25 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="row masonry">
+        <div class="container-fluid">
+            <div class="row masonry">
 
-            <div class="col-md-3" ng-repeat="feed in feeds | filter:filterText">
-                <div class="well">
-                    <img src="{{feed.image}}" alt="" class="img-responsive"/>
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <h4 class="media-heading"><a target="_blank" href="{{feed.link}}">{{feed.title}}</a></h4>
-                            <p class="text-left">{{feed.contentSnippet}}</p>
-                            <span class="small">{{feed.publishedDate}}</span>
+                <div class="col-md-3" ng-repeat="feed in feeds | filter:filterText">
+                    <div class="well">
+                        <img src="{{feed.image}}" alt="" class="img-responsive"/>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h4 class="media-heading"><a target="_blank" href="{{feed.link}}">{{feed.title}}</a></h4>
+                                <p class="text-left">{{feed.contentSnippet}}</p>
+                                <span class="small">{{feed.publishedDate}}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
+
     </div>
     <!--end canvas-->
 </div>
