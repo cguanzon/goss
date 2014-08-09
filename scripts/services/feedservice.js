@@ -1,6 +1,8 @@
 var App = angular.module('RSSFeedApp');
 
-App.service('FeedService',['$http',function($http){
+
+App.factory('FeedService',['$http',function($http){
+
 	//tsites can be put in a db later
 	var sites = [
 		{
@@ -27,15 +29,23 @@ App.service('FeedService',['$http',function($http){
 			rssUrl:'http://pinoygossipboy.net/feed/',
 			hemisphere: 'eastern'
 		}
-	]
+	];
 
+    return {
+        parseFeed : function(url){
+            return $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
+        },
 
-	this.getSites = function(){
-		return sites;
-	};
-	this.parseFeed = function(url){
-		return $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
-	};
+       	getSites : function(){
+			return sites;
+		},
 
-
+		getSources : function(){
+			var sourcesArray = [];
+			for(var i=0; i< sites.length; i++){
+				sourcesArray.push(sites[i].rssUrl);
+			}
+			return sourcesArray;
+		}
+    }
 }]);
