@@ -25,15 +25,15 @@ App.factory('FeedService',['$http',function($http){
 			hemisphere: 'eastern'
 		},
 		{
-			name:'Pinoy Gossip Boy',
-			rssUrl:'http://pinoygossipboy.net/feed/',
+			name: 'Pinow Showbiz',
+			rssUrl: 'http://pinoyshowbiz.wordpress.com/feed/',
 			hemisphere: 'eastern'
 		},
-        {
-            name: 'Whatsikat Showbis Tsimis',
-            rssUrl: 'http://feeds2.feedburner.com/WhatsikatChismis',
-            hemisphere: 'eastern'
-        }
+		{
+			name: 'The Pulse',
+			rssUrl: 'http://thepulse.ph/feed/',
+			hemisphere: 'eastern'
+		}
 	];
 
     return {
