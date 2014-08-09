@@ -33,13 +33,13 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="container-fluid">
-            <div class="page-header">{{siteHeading}}</div>
+        <div class="container">
+            <div class="page-header"><h1>{{siteHeading}}</h1></div>
             <div class="row masonry">
 
                 <div class="col-md-3" ng-repeat="feed in feeds | filter:filterText">
                     <div class="well">
-                        <img src="{{feed.image}}" alt="" class="img-responsive"/>
+                        <div class="text-center"><img src="{{feed.image}}" alt="" class="img-responsive"/></div>
                         <div class="overlay">
                             <div class="overlay-content">
                                 <h4 class="media-heading"><a target="_blank" href="{{feed.link}}">{{feed.title}}</a></h4>

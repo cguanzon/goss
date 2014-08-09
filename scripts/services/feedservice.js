@@ -6,20 +6,6 @@ App.factory('FeedService',['$http',function($http){
 	//tsites can be put in a db later
 	var sites = [
 		{
-			name: 'TMZ',
-			rssUrl: 'http://www.tmz.com/rss.xml',
-			hemisphere: 'western'
-		},
-		{
-			name: 'E! NEWS',
-			rssUrl: 'http://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml'
-		},
-		{
-			name:'DailyMail.UK',
-			rssUrl:'http://www.dailymail.co.uk/usshowbiz/index.rss',
-			hemisphere: 'western'
-		},
-		{
 			name:'Philippine Entertainment Portal',
 			rssUrl:'http://www.pep.ph/rss/pep_newsfeed.php',
 			hemisphere: 'eastern'
@@ -33,7 +19,12 @@ App.factory('FeedService',['$http',function($http){
 			name: 'The Pulse',
 			rssUrl: 'http://thepulse.ph/feed/',
 			hemisphere: 'eastern'
-		}
+		},
+        {
+            name: 'Pinoy Showbiz Daily',
+            rssUrl: 'http://pinoyshowbizdaily.blogspot.com/feeds/posts/default',
+            hemisphere: 'eastern'
+        }
 	];
 
     return {
