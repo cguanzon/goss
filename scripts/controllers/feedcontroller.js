@@ -1,7 +1,7 @@
 var App = angular.module('RSSFeedApp');
 
 
-App.controller("FeedCtrl", ['$scope','FeedService', function ($scope,Feed) {
+App.controller('FeedCtrl', ['$scope','FeedService', function ($scope,Feed) {
 	//local helper function
 	var addContentImageToFeed = function(feedArray){
 		for(var i=0; i < feedArray.length; i++){
@@ -27,5 +27,19 @@ App.controller("FeedCtrl", ['$scope','FeedService', function ($scope,Feed) {
 		
 	};
 
+	$scope.sources = Feed.getSources();
 
+	$scope.loadFifteen=function(){
+		$scope.feeds = [];
+		for(var i = 0; i < $scope.sources.length; i++){
+			Feed.parseFeed($scope.sources[i]).then(function(res){
+				var feedEntries = res.data.responseData.feed.entries;
+				for(var i=0; i<3; i++){
+					$scope.feeds.push(feedEntries[i]);
+				}
+				addContentImageToFeed($scope.feeds);
+			});	
+		}	
+	}
+	$scope.loadFifteen();	
 }]);
