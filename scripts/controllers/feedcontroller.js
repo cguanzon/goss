@@ -11,7 +11,7 @@ App.controller('FeedCtrl', ['$scope','FeedService', function ($scope,Feed) {
 				var imageUrl = src[0].substr(5, src[0].length - 6);
 				feedArray[i].image = imageUrl;
 			}else{
-			 	feedArray[i].image = "171.jpg";
+			 	feedArray[i].image = "images/171.jpg";
 			}
 		}
 	}

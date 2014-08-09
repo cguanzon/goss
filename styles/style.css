@@ -1,0 +1,92 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+html, body {
+    height: 100%;
+}
+.chismis-nav{
+    position: fixed;
+    top: 40px;
+}
+/*masonry styles*/
+.row.masonry {
+    -moz-column-width: 20em;
+    -webkit-column-width: 20em;
+    -moz-column-gap: 1em;
+    -webkit-column-gap:1em;
+    column-width: 15em;
+    padding: 15px;
+}
+
+.row.masonry > .col-md-3 {
+    display: inline-block;
+    padding:  .33rem;
+    width:  100%;
+    float:none;
+}
+
+.row.masonry .well {
+    /*position: relative;*/
+
+    min-height: 20px;
+    padding: 0px !important;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+
+.overlay-content {
+    padding: 10px;
+}
+
+h4 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+/*end masonry styles*/
+
+
+
+.navbar-toggle {
+    float: left;
+    margin-left: 15px;
+}
+
+.navmenu {
+    z-index: 1;
+}
+
+.canvas {
+    position: relative;
+    left: 0;
+    z-index: 2;
+    min-height: 100%;
+    padding: 50px 0 0 0;
+    background: #fff;
+}
+
+@media (min-width: 0) {
+    .navbar-toggle {
+        display: block; /* force showing the toggle */
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        padding: 0;
+    }
+    .navbar {
+        right: auto;
+        background: none;
+        border: none;
+    }
+    .canvas {
+        padding: 31px 0 0 0;
+    }
+}

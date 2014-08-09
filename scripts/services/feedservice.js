@@ -16,7 +16,7 @@ App.factory('FeedService',['$http',function($http){
 		},
 		{
 			name:'DailyMail.UK',
-			rssUrl:'http://www.dailymail.co.uk/tvshowbiz/index.rss',
+			rssUrl:'http://www.dailymail.co.uk/usshowbiz/index.rss',
 			hemisphere: 'western'
 		},
 		{
@@ -28,7 +28,12 @@ App.factory('FeedService',['$http',function($http){
 			name:'Pinoy Gossip Boy',
 			rssUrl:'http://pinoygossipboy.net/feed/',
 			hemisphere: 'eastern'
-		}
+		},
+        {
+            name: 'Whatsikat Showbis Tsimis',
+            rssUrl: 'http://feeds2.feedburner.com/WhatsikatChismis',
+            hemisphere: 'eastern'
+        }
 	];
 
     return {
