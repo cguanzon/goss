@@ -36,6 +36,11 @@ html, body {
     overflow: hidden;
     border: 1px solid transparent;
 }
+.text-center .img-responsive {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
 
 .overlay-content {
     padding: 10px;
@@ -52,7 +57,7 @@ h4 {
 
 .navbar-toggle {
     float: left;
-    margin-left: 4px;
+    margin-left: 15px;
 }
 
 .navmenu {
