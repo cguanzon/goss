@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html ng-app="RSSFeedApp">
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Chismis</title>
-  <script type='text/javascript' src="//code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script>
-  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Chismis</title>
+    <script type='text/javascript' src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,700,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -48,24 +48,24 @@
         </div>
 
 
-                <!--<span class="badge badge-warning" ng-show="feeds.length > 0">{{(feeds | filter:filterText).length}} Items</span>-->
+        <!--<span class="badge badge-warning" ng-show="feeds.length > 0">{{(feeds | filter:filterText).length}} Items</span>-->
 
-                    <div class="row masonry">
+        <div class="row masonry">
 
-                        <div class="col-md-3" ng-repeat="feed in feeds | filter:filterText">
-                            <div class="well">
-                                <img src="{{feed.image}}" alt="" class="img-responsive"/>
-                                <div class="overlay">
-                                    <div class="overlay-content">
-                                        <h4 class="media-heading"><a target="_blank" href="{{feed.link}}">{{feed.title}}</a></h4>
-                                        <p class="text-left">{{feed.contentSnippet}}</p>
-                                        <span class="small">{{feed.publishedDate}}</span>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="col-md-3" ng-repeat="feed in feeds | filter:filterText">
+                <div class="well">
+                    <img src="{{feed.image}}" alt="" class="img-responsive"/>
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h4 class="media-heading"><a target="_blank" href="{{feed.link}}">{{feed.title}}</a></h4>
+                            <p class="text-left">{{feed.contentSnippet}}</p>
+                            <span class="small">{{feed.publishedDate}}</span>
                         </div>
-
                     </div>
+                </div>
+            </div>
+
+        </div>
 
 
 
@@ -76,7 +76,7 @@
 
 <script type='text/javascript' src="scripts/app.js"></script>
 <script type="text/javascript" src="scripts/controllers/feedcontroller.js"></script>
-<script type="text/javascript" src="scripts/services/feedservice.js"></script>  
+<script type="text/javascript" src="scripts/services/feedservice.js"></script>
 
 </body>
 </html>
