@@ -1,0 +1,38 @@
+<div class="navmenu navmenu-default navmenu-fixed-left">
+    <a class="navmenu-brand" href="#">Walang Hiya Kang Chismoso Ka!</a>
+    <ul class="nav navmenu-nav">
+        <li ng-repeat="site in sites">
+            <a href="#" ng-click="loadFeed(site);">{{site.name}}</a>
+        </li>
+    </ul>
+</div>
+
+<div class="canvas">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu" data-canvas=".canvas">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="page-header wow fadeInUp"><h1>{{siteHeading}}</h1></div>
+        <div class="row masonry wow fadeInUp">
+
+            <div class="col-md-3 " ng-repeat="feed in feeds | filter:filterText">
+                <div class="well ">
+                    <div class="text-center"><img ng-src="{{feed.image}}" alt="" class="img-responsive"/></div>
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h4 class="media-heading"><a target="_blank" href="{{feed.link}}">{{feed.title}}</a></h4>
+                            <p class="text-left">{{feed.contentSnippet}}</p>
+                            <span class="small">{{feed.publishedDate}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
